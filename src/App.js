@@ -1,25 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import './App.css'; // Import your CSS styles
+import '@fortawesome/fontawesome-free/css/all.min.css';
 
-function App() {
+
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
+    <div className="container">
+      <img src="icon.png" alt="Event Logo" className="logo" />
+      
+      <div className="social-icons">
+        <a href="https://instagram.com/odisha_anime_club_" target="_blank" rel="noopener noreferrer">
+          <i className="fab fa-instagram"></i>
         </a>
-      </header>
+        <a href="https://chat.whatsapp.com/K9wodvkCTTlC1wY9JW1uv6" target="_blank" rel="noopener noreferrer">
+          <i className="fab fa-whatsapp"></i>
+        </a>
+      </div>
+
+      <div className="buttons">
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSdetxNNoUbwSHmtHJQ2oZELsQIkSAujYFkF61ab_jbFk_wcfw/viewform?usp=sf_link" className="button">Join Us Adventurers (Volunteers)</a>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSeC3gq88aZioE1lyK7zwoY-pjrXa7qBVcNiO92kmVhSO19apQ/viewform?usp=sf_link" className="button">Attention Business Owners</a>
+      </div>
     </div>
   );
-}
+};
 
 export default App;

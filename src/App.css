@@ -1,11 +1,99 @@
+
+
 .App {
   text-align: center;
 }
 
 .App-logo {
-  height: 40vmin;
+  height: 4vmin;
   pointer-events: none;
 }
+
+.logo {
+  width: 14rem; /* Adjusted to rem for relative sizing */
+  height: 14rem; /* Adjusted to rem for relative sizing */
+  margin: 0 auto 2rem; /* Changed to rem for bottom margin */
+  display: block;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  position: relative; /* For positioning the overlay */
+  display: flex; /* Use flexbox for centering */
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  height: 100vh; /* Full viewport height */}
+
+.container {
+  position: relative;
+  z-index: 2; /* Ensures the container is above the overlay */
+  max-width: 600px;
+  width: 100%; /* Make it responsive */
+  margin: auto;
+  background: rgba(255, 192, 203, 0.8); /* Light pink background */
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center; /* Center-align text inside the container */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.social-icons {
+  margin: 20px 0;
+}
+
+.social-icons a {
+  margin: 0 15px;
+  font-size: 28px; /* Increased size for the icon */
+  color: #ff1493; /* Darker pink color */
+  transition: color 0.3s;
+}
+
+.social-icons a:hover {
+  color: #ff69b4; /* Change to a lighter pink on hover */
+}
+
+
+.buttons {
+  margin-top: 20px;
+}
+
+.button {
+  display: inline-block;
+  margin: 10px 0;
+  padding: 15px 30px;
+  background-color: #ff69b4; /* Hot pink */
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 18px;
+  transition: background-color 0.3s;
+}
+
+.button:hover {
+  background-color: #ff1493; /* Darker pink on hover */
+}
+
+/* Background image and overlay */
+body::before {
+  content: '';
+  position: fixed; /* Make it fixed to cover the entire background */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('../public/wall.jpg') no-repeat center center fixed; /* Background image */
+  background-size: cover;
+  opacity: 0.1; /* Set the opacity to 10% */
+  z-index: 1; /* Place it below the container */
+}
+
+
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
