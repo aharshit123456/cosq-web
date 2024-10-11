@@ -1,0 +1,53 @@
+/* Make the navbar floating with centered content */
+.navbar {
+    position: fixed;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: auto;
+    background-color: rgba(0, 0, 0, 0.8); /* Transparent dark background */
+    padding: 0.8rem 2rem;
+    border-radius: 20px; /* Rounded corners */
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem; /* Space between buttons */
+    z-index: 100; /* Ensure it's on top */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Slight shadow for floating effect */
+  }
+  
+  /* Style the navigation buttons */
+  .nav-button {
+    color: white;
+    font-size: 1rem;
+    font-weight: 500;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 10px;
+    transition: background-color 0.3s, font-weight 0.3s;
+  }
+  
+  /* Hover effect for buttons */
+  .nav-button:hover {
+    background-color: rgba(255, 192, 203, 0.7); /* Light pink hover effect */
+  }
+  
+  /* Responsive font sizes and weights */
+  @media (min-width: 768px) {
+    .nav-button {
+      font-size: 1.2rem;
+      font-weight: 600; /* Increase font weight for larger screens */
+    }
+  }
+  
+  @media (max-width: 767px) {
+    .navbar {
+      top: 0;
+      padding: 1rem 1.5rem; /* Adjust padding for smaller screens */
+    }
+    
+    .nav-button {
+      font-size: 0.9rem;
+      font-weight: 400; /* Lighter font weight for mobile */
+    }
+  }
+  

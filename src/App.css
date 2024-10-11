@@ -21,7 +21,7 @@
 }
 
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Kagitingan', sans-serif; /* Apply Kagitingan globally */
   margin: 0;
   padding: 0;
   position: relative; /* For positioning the overlay */
