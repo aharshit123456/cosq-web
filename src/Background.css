@@ -28,7 +28,7 @@
 .background-layer.front {
   background-image: url('../public/desktop-front.png'); /* Desktop front image */
   z-index: 2; /* Front image in front */
-  opacity: 0.8;
+  opacity: 0.95;
 }
 
 /* Content styles */
@@ -159,8 +159,11 @@
   z-index: 5; /* Above other layers */
 }
 
+
+
 /* Style for buttons */
 .btn {
+  font-family: 'Kagitingan', sans-serif; /* Apply Kagitingan globally */
   padding: 10px 20px;
   border-radius: 30px; /* Rounded button */
   font-size: 2vw; /* Responsive font size */
