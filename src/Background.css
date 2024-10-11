@@ -1,0 +1,207 @@
+/* Base styles for the background container */
+.background-container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden; /* Prevents scrolling unless specifically allowed */
+}
+
+/* Styles for background layers */
+.background-layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  z-index: 1; /* Default z-index */
+}
+
+/* Default background images for desktop */
+.background-layer.back {
+  background-image: url('../public/desktop-background.png'); /* Desktop background */
+  z-index: 1; /* Background image behind */
+  opacity: 0.5; /* Adds transparency to the background */
+}
+
+.background-layer.front {
+  background-image: url('../public/desktop-front.png'); /* Desktop front image */
+  z-index: 2; /* Front image in front */
+  opacity: 0.8;
+}
+
+/* Content styles */
+.content {
+  position: relative;
+  z-index: 3; /* Content above the background images */
+  padding: 20px;
+  color: white;
+}
+
+/* Desktop view */
+@media (min-width: 768px) {
+  .background-layer.front {
+    background-size: 100% auto; /* Scale front image to fit width */
+    background-attachment: fixed; /* Keeps front image fixed */
+  }
+
+  .background-layer.back {
+    background-size: cover; /* Background covers the entire viewport */
+    background-attachment: fixed;
+  }
+}
+
+/* Mobile view (max-width: 767px) */
+/* Mobile view (max-width: 767px) */
+@media (max-width: 767px) {
+  .background-layer.back {
+    background-image: url('../public/mobile-background.png'); /* Mobile background */
+    background-size: cover; /* Background covers the viewport */
+    background-attachment: fixed; /* Stays fixed while front scrolls */
+  }
+
+  .background-layer.front {
+    background-image: url('../public/mobile-front.png'); /* Mobile front image */
+    background-size: 100% auto; /* Fit the front image to the width, no repeating */
+    background-repeat: no-repeat; /* Ensure it doesn't repeat */
+    background-attachment: scroll; /* Allows scrolling */
+    height: 100vh; /* Set the height to full viewport height */
+  }
+
+  /* Ensure the container is full height and enables scrolling */
+  .background-container {
+    height: 100vh; /* Full height of the viewport */
+    overflow-y: scroll; /* Enable vertical scrolling */
+  }
+}
+
+
+/* Style for the CosQ logo */
+.cosq-logo {
+  position: absolute;
+  top: 0%; /* Higher elevation from the top */
+  right: 5%; /* Align to the top-right corner */
+  width: 25vw; /* Set width relative to viewport (adjust as needed) */
+  z-index: 4; /* Keep the logo above the background layers */
+}
+
+/* For mobile view (max-width: 767px), adjust the size */
+@media (max-width: 767px) {
+  .cosq-logo {
+    width: 40vw; /* Smaller width for mobile, adjust as needed */
+  }
+}
+
+/* Style for the text block */
+.event-text {
+  position: absolute;
+  bottom: 8%; /* Position from the bottom */
+  left: 2%; /* Position from the left */
+  color: #ff69b4; /* Bright pink color (Hot Pink) */
+  font-weight: bold; /* Make the text bold */
+  font-size: 3.5vw; /* Responsive font size based on viewport width */
+  z-index: 4; /* Keep the text above the background layers */
+  width: auto; /* Auto width to fit content */
+  height: auto; /* Auto height to fit content */
+  max-width: 45%; /* Prevents the text from exceeding viewport width */
+  text-align: left; /* Align text to the left */
+  line-height: 1.2; /* Adjust line height for better readability */
+  overflow-wrap: break-word; /* Allow breaking of long words */
+  white-space: normal; /* Allow text to wrap normally */
+
+
+    /* Text stroke */
+    text-shadow: 
+    -0.5px -0.5px 0 #000,  
+    0.5px -0.5px 0 #000,
+    -0.5px 0.5px 0 #000,
+    0.5px 0.5px 0 #000; /* Black outline effect */
+
+  /* Background for contrast */
+  background-color: rgba(255, 255, 255, 0.6); /* White background with 60% opacity */
+  padding: 5px; /* Add some padding around the text */
+  border-radius: 5px; /* Rounded corners for the background */
+}
+
+.event-date{
+  font-size: 3vw;
+}
+
+.event-venue{
+  font-size: 3vw;
+}
+
+/* Media query for mobile view adjustments */
+@media (max-width: 767px) {
+  .event-text {
+    bottom: 19% ;/* Position from the bottom */
+    left: 5%; /* Position from the left */
+    font-size: 5vw; /* Larger font size for mobile */
+    max-width: 40%; /* Adjust max-width for better mobile display */
+  }
+  .event-date{
+    font-size: 4vw;
+  }
+  
+  .event-venue{
+    font-size: 4vw;
+  }
+}
+
+/* Container for buttons */
+.button-container {
+  position: absolute;
+  bottom: 8%; /* Position from the bottom for desktop */
+  right: 4%; /* Align to the right for desktop */
+  display: flex; /* Display buttons in a row */
+  gap: 10px; /* Space between the buttons */
+  z-index: 5; /* Above other layers */
+}
+
+/* Style for buttons */
+.btn {
+  padding: 10px 20px;
+  border-radius: 30px; /* Rounded button */
+  font-size: 2vw; /* Responsive font size */
+  font-weight: bold;
+  cursor: pointer;
+  border: none;
+  transition: background-color 0.3s ease;
+}
+
+/* Prebooking Button */
+.btn-prebooking {
+  background-color: #ffb6c1; /* Light Pink Background */
+  color: #ff1493; /* Bright Pink Text */
+}
+
+.btn-prebooking:hover {
+  background-color: #ff1493; /* Bright Pink Background on Hover */
+  color: #fff; /* White Text on Hover */
+}
+
+/* Volunteer Button */
+.btn-volunteer {
+  background-color: #ff1493; /* Bright Pink Background */
+  color: #fff; /* White Text */
+}
+
+.btn-volunteer:hover {
+  background-color: #ffb6c1; /* Light Pink Background on Hover */
+  color: #ff1493; /* Bright Pink Text on Hover */
+}
+
+/* Mobile view: center buttons */
+@media (max-width: 767px) {
+  .button-container {
+    bottom: 12%; /* Adjust position from bottom for mobile */
+    right: 0; /* Reset right */
+    left: 0; /* Center horizontally */
+    justify-content: center; /* Center buttons horizontally */
+  }
+  
+  .btn {
+    font-size: 3.4vw; /* Larger font size for mobile */
+  }
+}
