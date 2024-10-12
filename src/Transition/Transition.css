@@ -1,0 +1,56 @@
+.transition-container {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Full height */
+    overflow: hidden;
+  }
+  
+  .transition-gif {
+    position: absolute;
+    top: -100%; /* Start above the viewport */
+    left: 0;
+    width: 100%;
+    height: 100%; /* Full height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: white; /* Background color behind the GIF */
+    animation: slide 3s forwards; /* Slide down and then slide up */
+  }
+  
+  @keyframes slide {
+    0% {
+      top: -100%; /* Start above the viewport */
+    }
+    50% {
+      top: 0; /* Slide down to the viewport */
+    }
+    100% {
+      top: -100%; /* Slide back up */
+    }
+  }
+  
+  .transition-gif img {
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;  /* Maintain aspect ratio */
+    height: auto; /* Maintain aspect ratio */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Center the GIF */
+  }
+  
+  .content {
+    opacity: 0;
+    transition: opacity 0.5s ease-in; /* Smooth transition for the content */
+  }
+  
+  .content:not(.hidden) {
+    opacity: 1; /* Show content after the GIF */
+  }
+  
+  .hidden {
+    display: none; /* Hide content when GIF is visible */
+  }
+  

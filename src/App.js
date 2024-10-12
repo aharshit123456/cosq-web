@@ -4,6 +4,7 @@ import Navbar from './Navbar.js';
 import More from './pages/More.js';
 import Contact from './pages/Contact.js';
 import BackgroundComponent from './BackgroundComponent';
+import Transition from './Transition/Transition.js'; // Import the Transition component
 
 function App() {
   return (
@@ -11,9 +12,30 @@ function App() {
       <div>
         <Navbar />  {/* Add the Navbar to the top */}
         <Routes>
-          <Route path="/" element={<BackgroundComponent />} />
-          <Route path="/more" element={<More />} />
-          <Route path="/contact" element={<Contact />} />
+          <Route 
+            path="/" 
+            element={
+              <Transition>
+                <BackgroundComponent />
+              </Transition>
+            } 
+          />
+          <Route 
+            path="/more" 
+            element={
+              <Transition>
+                <More />
+              </Transition>
+            } 
+          />
+          <Route 
+            path="/contact" 
+            element={
+              <Transition>
+                <Contact />
+              </Transition>
+            } 
+          />
         </Routes>
       </div>
     </Router>
