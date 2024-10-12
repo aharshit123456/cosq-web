@@ -1,3 +1,4 @@
+/*Background.css*/
 /* Base styles for the background container */
 .background-container {
   position: relative;
@@ -80,16 +81,32 @@
 /* Style for the CosQ logo */
 .cosq-logo {
   position: absolute;
-  top: 0%; /* Higher elevation from the top */
-  right: 5%; /* Align to the top-right corner */
+  top: 0; /* Align to the top */
+  left: 5%; /* Align to the top-left corner */
   width: 25vw; /* Set width relative to viewport (adjust as needed) */
   z-index: 4; /* Keep the logo above the background layers */
+}
+
+/* Join Us image style */
+.join-us {
+  position: absolute;
+  top: 0; /* Align to the top */
+  right: 5%; /* Align to the top-right corner */
+  width: 30vw; /* Set width relative to viewport (adjust as needed) */
+  z-index: 4; /* Keep above the background layers */
 }
 
 /* For mobile view (max-width: 767px), adjust the size */
 @media (max-width: 767px) {
   .cosq-logo {
-    width: 40vw; /* Smaller width for mobile, adjust as needed */
+    top: 0; /* Keep logo at the top */
+    right: 5%; /* Move logo to the top-right corner for mobile */
+    left: auto; /* Reset left positioning */
+    width: 40vw; /* Smaller width for mobile */
+  }
+
+  .join-us {
+    display: none; /* Hide the join-us image in mobile view */
   }
 }
 

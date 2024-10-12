@@ -24,6 +24,7 @@ body {
   font-family: 'Kagitingan', sans-serif; /* Apply Kagitingan globally */
   margin: 0;
   padding: 0;
+  /* overflow-y: auto; */
   position: relative; /* For positioning the overlay */
   display: flex; /* Use flexbox for centering */
   justify-content: center; /* Center horizontally */
