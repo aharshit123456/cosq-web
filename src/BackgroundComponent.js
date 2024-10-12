@@ -21,8 +21,13 @@ const BackgroundComponent = () => {
       </div>
 
       <div className="button-container">
-        <button className="btn btn-prebooking">Prebooking Open Soon</button>
-        <button className="btn btn-volunteer">Volunteers Join Us</button>
+        <button className="btn btn-prebooking" onClick={()=> alert("Prebooking Opening Soon")}>Prebooking Open Soon</button>
+        <button 
+          className="btn btn-volunteer" 
+          onClick={() => window.location.href='https://forms.gle/eSjE4LS8Czn3pvay6'}
+        >
+          Volunteers Join Us
+        </button>
       </div>
     </div>
   );
