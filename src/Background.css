@@ -110,6 +110,20 @@
   }
 }
 
+.join-us {
+  animation: scale-up-down 1s infinite; /* Adjust duration as needed */
+}
+
+@keyframes scale-up-down {
+  0%, 100% {
+      transform: scale(1); /* Original size */
+  }
+  50% {
+      transform: scale(1.1); /* Scale up slightly */
+  }
+}
+
+
 /* Style for the text block */
 .event-text {
   position: absolute;
