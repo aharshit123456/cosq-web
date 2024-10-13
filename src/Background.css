@@ -99,15 +99,20 @@
 /* For mobile view (max-width: 767px), adjust the size */
 @media (max-width: 767px) {
   .cosq-logo {
-    top: 0; /* Keep logo at the top */
+    top: 7%; /* Keep logo at the top */
     right: 5%; /* Move logo to the top-right corner for mobile */
     left: auto; /* Reset left positioning */
-    width: 40vw; /* Smaller width for mobile */
+    width: 45vw; /* Smaller width for mobile */
   }
 
   .join-us {
-    display: none; /* Hide the join-us image in mobile view */
+    position: absolute;
+    top: 27%; /* Align to the top */
+    right: 5%; /* Align to the top-right corner */
+    width: 40vw; /* Set width relative to viewport (adjust as needed) */
+    z-index: 4; /* Keep above the background layers */
   }
+  
 }
 
 .join-us {
@@ -144,10 +149,10 @@
 
     /* Text stroke */
     text-shadow: 
-    -0.5px -0.5px 0 #000,  
-    0.5px -0.5px 0 #000,
-    -0.5px 0.5px 0 #000,
-    0.5px 0.5px 0 #000; /* Black outline effect */
+    -0.25px -0.25px 0 #000,  
+    0.25px -0.25px 0 #000,
+    -0.25px 0.25px 0 #000,
+    0.25px 0.25px 0 #000; /* Black outline effect */
 
   /* Background for contrast */
   background-color: rgba(255, 255, 255, 0.6); /* White background with 60% opacity */

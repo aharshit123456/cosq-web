@@ -9,7 +9,7 @@ function App() {
   return (
     <Router>
       <div>
-        <Navbar />  {/* Add the Navbar to the top */}
+        <Navbar/>  {/* Add the Navbar to the top */}
         <Routes>
           <Route path="/" element={<BackgroundComponent />} />
           <Route path="/more" element={<More />} />
