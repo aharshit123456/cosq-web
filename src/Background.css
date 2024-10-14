@@ -54,7 +54,6 @@
 }
 
 /* Mobile view (max-width: 767px) */
-/* Mobile view (max-width: 767px) */
 @media (max-width: 767px) {
   .background-layer.back {
     background-image: url('../public/mobile-background.png'); /* Mobile background */
