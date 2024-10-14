@@ -22,12 +22,14 @@
 /* Desktop view */
 @media (min-width: 768px) {
     .background-layer.front {
+      background-image: url('../public/desktop-front.png'); /* Desktop front image */
       background-size: 100% auto; /* Scale front image to fit width */
       background-attachment: fixed; /* Keeps front image fixed */
       opacity: 0.5;
     }
   
     .background-layer.back {
+      background-image: url('../public/desktop-background.png'); /* Desktop background */
       background-size: cover; /* Background covers the entire viewport */
       background-attachment: fixed;
     }
