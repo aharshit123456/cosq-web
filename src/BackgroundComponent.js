@@ -16,7 +16,7 @@ const BackgroundComponent = () => {
       
       <div className="event-text">
         "Odisha's First Open Ground Pop Culture Event" <br />
-        <span className="event-date">30th November</span> <br />
+        <span className="event-date">Soon!!</span> <br />
         <span className="event-venue">Bhubaneswar, Odisha</span>
       </div>
 
