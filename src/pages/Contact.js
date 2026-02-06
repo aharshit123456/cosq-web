@@ -1,9 +1,12 @@
 import React from 'react';
 import './Contact.css'; // Assuming CSS for styling
 
+import Navbar from '../Navbar';
+
 const Contact = () => {
   return (
     <div className='background-container'>
+      <Navbar />
       <div className="background-layer back"></div>
       <div className="content-layer">
         <h1>Contact Us</h1>

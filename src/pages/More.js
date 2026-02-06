@@ -2,6 +2,7 @@
 
 import React from 'react';
 // import Events from '../Events/Events';
+import Navbar from '../Navbar';
 import './More.css'; // Import the CSS file
 // import { useState } from 'react';
 // Modal Component
@@ -66,12 +67,13 @@ const More = () => {
 
   return (
     <div className='background-container'>
+      <Navbar />
       <div className="background-layer back"></div>
       <div className="content-layer">
         <h1>More Information about COSQ</h1>
         <p>Details about upcoming events, features, and more.</p>
         {/* <Events /> */}
-          {/* <EventCard
+        {/* <EventCard
             key={1}
             title="LAN Gaming (Mobile and PC)"
             description="Join us for an exciting LAN gaming experience!"

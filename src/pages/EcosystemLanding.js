@@ -3,97 +3,99 @@ import { Link } from 'react-router-dom';
 import '../index.css';
 
 const EcosystemLanding = () => {
-    const [hovered, setHovered] = useState(null);
+  const [hovered, setHovered] = useState(null);
 
-    const bestVentures = [
-        {
-            id: 'wham',
-            title: 'WHAM!',
-            domain: 'wham.cosq.in',
-            tagline: 'OTT Platform',
-            description: 'Hybrid playback, Comic-paneled immersive "Living Comic Book" design.',
-            color: '#FF1493', // Hot Pink from legacy
-            action: 'Watch Now',
-            link: 'https://wham.cosq.in'
-        },
-        {
-            id: 'previouslyon',
-            title: 'PreviouslyOn',
-            domain: 'previouslyon.cosq.in',
-            tagline: 'Letterboxd for TV',
-            description: 'Social TV tracking, real-time feeds, and AI recommendations.',
-            color: '#00D4FF', // Cyan-ish
-            action: 'Track Shows',
-            link: 'https://previouslyon.cosq.in'
-        },
-        {
-            id: 'research',
-            title: 'Research & IT',
-            domain: 'research.cosq.in',
-            tagline: 'Innovation Wing',
-            description: 'Home of SaaS products like MemoChan (AI Note Taker) and model research.',
-            color: '#50C878', // Emerald Green
-            action: 'Explore Labs',
-            link: 'https://research.cosq.in'
-        },
-        {
-            id: 'labs',
-            title: 'CosQ Labs',
-            domain: 'labs.cosq.in',
-            tagline: 'Creative & Talent',
-            description: 'Digital Labs (Graphics) & Creators Labs (Talent Agency).',
-            color: '#9D00FF', // Electric Purple
-            action: 'Create',
-            link: 'https://labs.cosq.in'
-        }
-    ];
+  const bestVentures = [
+    {
+      id: 'wham',
+      title: 'WHAM!',
+      domain: 'wham.cosq.in',
+      tagline: 'OTT Platform',
+      description: 'Hybrid playback, Comic-paneled immersive "Living Comic Book" design.',
+      color: '#FF1493', // Hot Pink from legacy
+      action: 'Watch Now',
+      link: 'https://wham.cosq.in'
+    },
+    {
+      id: 'previouslyon',
+      title: 'PreviouslyOn',
+      domain: 'previouslyon.cosq.in',
+      tagline: 'Letterboxd for TV',
+      description: 'Social TV tracking, real-time feeds, and AI recommendations.',
+      color: '#00D4FF', // Cyan-ish
+      action: 'Track Shows',
+      link: 'https://previouslyon.cosq.in'
+    },
+    {
+      id: 'research',
+      title: 'Research & IT',
+      domain: 'research.cosq.in',
+      tagline: 'Innovation Wing',
+      description: 'Home of SaaS products like MemoChan (AI Note Taker) and model research.',
+      color: '#50C878', // Emerald Green
+      action: 'Explore Labs',
+      link: 'https://research.cosq.in'
+    },
+    {
+      id: 'labs',
+      title: 'CosQ Labs',
+      domain: 'labs.cosq.in',
+      tagline: 'Creative & Talent',
+      description: 'Digital Labs (Graphics) & Creators Labs (Talent Agency).',
+      color: '#9D00FF', // Electric Purple
+      action: 'Create',
+      link: 'https://labs.cosq.in'
+    }
+  ];
 
-    return (
-        <div className="ecosystem-container">
-            {/* Background Overlay */}
-            <div className="ecosystem-overlay"></div>
+  return (
+    <div className="ecosystem-container">
+      {/* Background Overlay */}
+      <div className="ecosystem-overlay"></div>
 
-            {/* Hero Section */}
-            <header className="ecosystem-header">
-                <img src="/icon.png" alt="CosQ Logo" className="ecosystem-logo" />
-                <h1 className="ecosystem-title">The CosQ Ecosystem</h1>
-                <p className="ecosystem-subtitle">A collection of ventures, projects, and personal passions.</p>
+      {/* Hero Section */}
+      <header className="ecosystem-header">
+        <img src="/icon.png" alt="CosQ Logo" className="ecosystem-logo" />
+        <h1 className="ecosystem-title">The CosQ Ecosystem</h1>
+        <p className="ecosystem-subtitle">A collection of ventures, projects, and personal passions.</p>
 
-                <Link to="/legacy" className="legacy-link">Visit Legacy Event Page &rarr;</Link>
-            </header>
+        <Link to="/legacy" className="legacy-link">Visit Legacy Event Page &rarr;</Link>
+        <br />
+        <Link to="/team" className="team-link">Meet the Team &rarr;</Link>
+      </header>
 
-            {/* Ventures Grid */}
-            <div className="ventures-grid">
-                {bestVentures.map((venture) => (
-                    <a
-                        key={venture.id}
-                        href={venture.link}
-                        className={`venture-card ${venture.id}`}
-                        onMouseEnter={() => setHovered(venture.id)}
-                        onMouseLeave={() => setHovered(null)}
-                        style={{ '--hover-color': venture.color }}
-                    >
-                        <div className="card-content">
-                            <h2 className="venture-title">{venture.title}</h2>
-                            <span className="venture-domain">{venture.domain}</span>
-                            <p className="venture-tagline">{venture.tagline}</p>
-                            <p className="venture-desc">{venture.description}</p>
-                            <span className="venture-action">{venture.action} &rarr;</span>
-                        </div>
-                        {/* Visual Flair */}
-                        <div className="card-shine"></div>
-                        {venture.id === 'wham' && hovered === 'wham' && (
-                            <div className="bam-effect">BAM!</div>
-                        )}
-                    </a>
-                ))}
+      {/* Ventures Grid */}
+      <div className="ventures-grid">
+        {bestVentures.map((venture) => (
+          <a
+            key={venture.id}
+            href={venture.link}
+            className={`venture-card ${venture.id}`}
+            onMouseEnter={() => setHovered(venture.id)}
+            onMouseLeave={() => setHovered(null)}
+            style={{ '--hover-color': venture.color }}
+          >
+            <div className="card-content">
+              <h2 className="venture-title">{venture.title}</h2>
+              <span className="venture-domain">{venture.domain}</span>
+              <p className="venture-tagline">{venture.tagline}</p>
+              <p className="venture-desc">{venture.description}</p>
+              <span className="venture-action">{venture.action} &rarr;</span>
             </div>
+            {/* Visual Flair */}
+            <div className="card-shine"></div>
+            {venture.id === 'wham' && hovered === 'wham' && (
+              <div className="bam-effect">BAM!</div>
+            )}
+          </a>
+        ))}
+      </div>
 
-            <footer className="ecosystem-footer">
-                <p>&copy; {new Date().getFullYear()} CosQ. All rights reserved.</p>
-            </footer>
+      <footer className="ecosystem-footer">
+        <p>&copy; {new Date().getFullYear()} CosQ. All rights reserved.</p>
+      </footer>
 
-            <style>{`
+      <style>{`
         /* Inline styles for rapid development, can be moved to CSS later */
         .ecosystem-container {
           min-height: 100vh;
@@ -154,16 +156,17 @@ const EcosystemLanding = () => {
           font-weight: 300;
         }
 
-        .legacy-link {
+        .legacy-link, .team-link {
           display: inline-block;
-          margin-top: 20px;
+          margin-top: 10px;
+          margin-right: 15px;
           color: #FF1493;
           text-decoration: none;
           font-size: 0.9rem;
           border-bottom: 1px solid transparent;
           transition: all 0.3s;
         }
-        .legacy-link:hover {
+        .legacy-link:hover, .team-link:hover {
           border-bottom-color: #FF1493;
           letter-spacing: 1px;
         }
@@ -282,8 +285,8 @@ const EcosystemLanding = () => {
           .ventures-grid { grid-template-columns: 1fr; }
         }
       `}</style>
-        </div>
-    );
+    </div>
+  );
 };
 
 export default EcosystemLanding;
