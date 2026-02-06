@@ -9,11 +9,10 @@ const Contact = () => {
         <h1>Contact Us</h1>
         <p>If you have any questions, feel free to reach out:</p>
         <p>
-          Email: <a href="mailto:info@cosq.in">info@cosq.in</a> or 
-          <a href="mailto:odishaanimeclubofficial@gmail.com"> odishaanimeclubofficial@gmail.com</a>
+          Email: <a href="mailto:info@cosq.in">info@cosq.in</a>
         </p>
-        
-        <p>
+
+        {/* <p>
           <img 
             src="/icons/whatsapp-icon.png" 
             alt="WhatsApp Icon" 
@@ -21,11 +20,11 @@ const Contact = () => {
           />
           WhatsApp: <a href="https://chat.whatsapp.com/FvzflrwMdtf6Pya8ul9TO3">Updates Group</a>
         </p>
-        
+         */}
         <p>
-          <img 
-            src="/icons/instagram-icon.png" 
-            alt="Instagram Icon" 
+          <img
+            src="/icons/instagram-icon.png"
+            alt="Instagram Icon"
             style={{ width: '24px', marginRight: '8px', verticalAlign: 'middle' }}
           />
           Instagram: <a href="https://instagram.com/the.cosq">@the.cosq</a>
